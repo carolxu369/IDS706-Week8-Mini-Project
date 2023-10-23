@@ -32,9 +32,11 @@ jobs:
 
     - name: Check Rust code format
       run: |
+        cd rust_project   # <-- Change to the Rust project directory
         rustup component add rustfmt
         cargo fmt -- --check
 
     - name: Run Rust tests
       run: |
+        cd rust_project   # <-- Change to the Rust project directory
         cargo test
