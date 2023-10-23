@@ -1,0 +1,1 @@
+/Users/carolxu/Documents/school/Duke/IDS706\ Data\ Engineering/IDS\ 706/IDS706-Week8-Mini-Project/rust_project/target/debug/rust_project: /Users/carolxu/Documents/school/Duke/IDS706\ Data\ Engineering/IDS\ 706/IDS706-Week8-Mini-Project/rust_project/src/main.rs

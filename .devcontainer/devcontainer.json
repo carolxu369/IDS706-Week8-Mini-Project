@@ -1,0 +1,10 @@
+{
+    "name": "Python Environment",
+    "image": "python:3.9-slim",
+    "forwardPorts": [],
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": ["ms-python.python"],
+    "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"]
+}
