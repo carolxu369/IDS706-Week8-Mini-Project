@@ -20,8 +20,9 @@ This is the report comparing speed and resource usage for the python and rust.
 Python script executed in 0.0434 seconds.  
 Filename: python_script.py  
   
-Line #    Mem usage    Increment  Occurrences   Line Contents  
-=============================================================  
+Python Result
+=============================================================
+    Line #    Mem usage    Increment  Occurrences   Line Contents
     18     15.5 MiB     15.5 MiB           1   @profile  
     19                                         def main():  
     20                                             """  
@@ -59,10 +60,13 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
                   21  involuntary context switches  
            974814266  instructions retired  
            288506261  cycles elapsed  
-            12354496  peak memory footprint  
+            12354496  peak memory footprint    
+
   
+Rust Result
+=============================================================  
 Finished dev [unoptimized + debuginfo] target(s) in 0.01s  
-     Running `target/debug/rust_project`  
+     Running `target/debug/rust_project`
 Rust script executed in 0.0052 seconds.  
         0.14 real         0.05 user         0.01 sys  
              1687552  maximum resident set size  
@@ -115,3 +119,5 @@ Comparing Python and Rust for this specific task resulted in:
 - A more efficient execution as evidenced by fewer instructions retired and cycles elapsed with Rust.
   
 It's important to note that while Rust offers superior performance in many scenarios, the right tool should be chosen based on the project's specific requirements, as what we discussed in class.
+
+
