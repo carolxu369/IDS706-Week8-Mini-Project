@@ -1,11 +1,13 @@
+use csv::ReaderBuilder;
+use std::error::Error;
 use std::fs::File;
 use std::io::{BufReader, BufWriter};
-use std::error::Error;
 use std::time::Instant;
-use csv::ReaderBuilder;
 
 fn process_data(data: &Vec<&str>) -> Vec<String> {
-    data.iter().map(|&x| (x.parse::<i32>().unwrap() * 2).to_string()).collect()
+    data.iter()
+        .map(|&x| (x.parse::<i32>().unwrap() * 2).to_string())
+        .collect()
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -13,7 +15,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let input_file = File::open("../input.csv")?;
     let output_file = File::create("output.csv")?;
-    
+
     let reader = BufReader::new(input_file);
     let mut rdr = ReaderBuilder::new().from_reader(reader);
 
@@ -27,7 +29,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     let duration = start_time.elapsed();
-    println!("Rust script executed in {:.4} seconds.", duration.as_secs_f64());
+    println!(
+        "Rust script executed in {:.4} seconds.",
+        duration.as_secs_f64()
+    );
 
     Ok(())
 }
